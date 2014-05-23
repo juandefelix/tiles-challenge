@@ -28,19 +28,21 @@ class TilesController < ApplicationController
 
   # POST /tiles
   # POST /tiles.json
-  # def create
-  #   @tile = Tile.new(tile_params)
+  def create
+    @tile = Tile.new(tile_params)
+    @id = params[:tile][:id]
+    # binding.pry
 
-  #   respond_to do |format|
-  #     if @tile.save
-  #       format.html { redirect_to @tile, notice: 'Tile was successfully created.' }
-  #       format.json { render action: 'show', status: :created, location: @tile }
-  #     else
-  #       format.html { render action: 'new' }
-  #       format.json { render json: @tile.errors, status: :unprocessable_entity }
-  #     end
-  #   end
-  # end
+    respond_to do |format|
+      if @tile.save
+        format.html { redirect_to @tile, notice: 'Tile was successfully created.' }
+        format.js { render "success" }
+      else
+        format.html { render action: 'new' }
+        format.js { render action: 'exception' }
+      end
+    end
+  end
 
   # PATCH/PUT /tiles/1
   # PATCH/PUT /tiles/1.json
@@ -72,8 +74,7 @@ class TilesController < ApplicationController
     #   @tile = Tile.find(params[:id])
     # end
 
-    # # Never trust parameters from the scary internet, only allow the white list through.
-    # def tile_params
-    #   params[:tile]
-    # end
+     def tile_params
+      params.require(:tile).permit(:word, :timestamp)
+    end
   end
