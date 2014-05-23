@@ -1,5 +1,7 @@
 TilesChallenge::Application.routes.draw do
 
+  resources :tiles
+
   # Sidekiq web interface
   #   acess via localhost:3000/sidekiq
   require 'sidekiq/web'
