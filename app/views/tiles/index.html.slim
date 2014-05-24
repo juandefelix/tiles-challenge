@@ -1,42 +1,4 @@
-h4 CharlieApp Challenge
-
-
-
-div id = "tiles_container" class = "clear"
-  - @tiles.each_with_index do |tile, index|
-      div class = "tile" id = index
-        p class = "name"
-          = tile
-  br class="clear"
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/td = link_to 'Show', tile
-/td = link_to 'Edit', edit_tile_path(tile)
-/td = link_to 'Destroy', tile, :confirm => 'Are you sure?', :method => :delete
-/ = link_to 'New Tile', new_tile_path
+div 
+- @tiles.each do |tile|
+  p
+    = tile

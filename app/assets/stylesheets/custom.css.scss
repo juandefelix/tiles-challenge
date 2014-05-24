@@ -1,0 +1,35 @@
+// Place all the styles related to the tiles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+h4 {
+  padding-top: 25px;
+}
+
+#tiles_container {
+  // border: 1px solid red;
+  width: 1170px;
+  padding-bottom: 50px;
+}
+
+.clear {
+  clear: both;
+}
+
+.tile {
+  float: left;
+  margin: 7px;
+  width: 11.05%;
+  height: 75px;
+  background-color: #99FFCC;
+  border: 1px solid   #8AE6B8;
+  border-radius: 3px;
+  &:hover {
+  background-color: #00FFaa;
+  }
+}
+
+.name {
+  text-align: center;
+  margin: 26px auto;
+}

@@ -1,0 +1,11 @@
+h4 CharlieApp Challenge
+
+
+
+div id = "tiles_container" class = "clear"
+  - StaticPagesHelper::words.each_with_index do |tile, index|
+      div class = "tile" id = index
+        p class = "name"
+          = tile
+  br class="clear"
+      
