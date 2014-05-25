@@ -1,5 +1,3 @@
-require 'debugger'
-
 class TilesController < ApplicationController
   
   def index

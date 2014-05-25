@@ -1,4 +1,6 @@
-div 
-- @tiles.each do |tile|
-  p
-    = tile
+h3 MOST CLICKED NAMES
+
+div class="center"
+  ul
+  - @tiles.each do |tile|
+    li = "#{tile.word}  #{votes_of tile}"

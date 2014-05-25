@@ -1,8 +1,7 @@
 $ ->
   count = 0
   $(".tile").click ->
-    count += 1
-    console.log count
+    # console.log count
     tile = $(this)
     word = $("p", this).text()
     id = $(this).attr('id')
@@ -20,10 +19,11 @@ $ ->
         tile.css("background-color", "#FFAAAA")
         tile.css("border", "#FFA0A0")
       success:(r) ->
+        count += 1
         console.log(r)
-
-    if count == 64
-      document.location.href = '/tiles' 
+        console.log count
+        if count == 64
+          document.location.href = '/tiles' 
 
 
 
