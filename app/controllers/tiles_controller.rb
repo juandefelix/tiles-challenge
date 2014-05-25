@@ -7,18 +7,19 @@ class TilesController < ApplicationController
   end
 
   def create
-    @tile = Tile.new(tile_params)
-    @id = params[:tile][:id]
-    # binding.pry
-
+    word = params[:tile][:word]
+    timestamp = params[:tile][:timestamp]
+    
+    MongoWorker.perform_async(word, timestamp)
+    
     respond_to do |format|
-      if @tile.save
+      # if @tile.save
         format.html { redirect_to @tile, notice: 'Tile was successfully created.' }
         format.js { render "success" }
-      else
-        format.html { render action: 'new' }
-        format.js { render action: 'exception' }
-      end
+      # else
+      #   format.html { render action: 'new' }
+      #   format.js { render action: 'exception' }
+      # end
     end
   end
 
@@ -29,6 +30,4 @@ class TilesController < ApplicationController
   end
 
 
-Tile.distinct(:word).each do |w|
-  puts "#{w}: #{Tile.where(word:w).count}"
-end
+# @id = params[:tile][:id]
