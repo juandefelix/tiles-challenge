@@ -18,6 +18,10 @@ $ ->
       error: ->
         tile.css("visibility", "visible")
         tile.css("background-color", "#FFAAAA")
+        tile.css("border", "#FFA0A0")
+      success:(r) ->
+        console.log(r)
+
     if count == 64
       document.location.href = '/tiles' 
 

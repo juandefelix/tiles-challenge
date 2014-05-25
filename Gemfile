@@ -34,4 +34,4 @@ group :test, :development do
 end
 
 # Use debugger
-gem 'pry', group: [:development, :test]
+gem 'debugger', group: [:development, :test]

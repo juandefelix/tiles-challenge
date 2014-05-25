@@ -13,19 +13,19 @@ class Tile
 end
 
 
-=begin
-  
-Tile.where(name: "Photek").count
 
-Tile.distinct(:word)
+# Count of Tiles with the same word
+# Tile.where(word: "Photek").count
+
+# Numbe of tiles with a distinct word
+# Tile.distinct(:word)
 
 # Match all people with last name Jordan and first name starting with d.
-Tile.where(last_name: "Jordan").and(first_name: /^d/i)
+# Tile.where(last_name: "Jordan").and(first_name: /^d/i)
 
-Tile.desc(:first_name, :last_name)
+# Tile.desc(:first_name, :last_name)
   
-Tile.limit(10)
+# Tile.limit(10)
 
 
 
-=end
