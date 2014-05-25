@@ -1,6 +1,6 @@
-h3 MOST CLICKED NAMES
+h4 id="tiles_title" MOST CLICKED NAMES AND NUMBER OF CLICKS
 
-div class="center"
+div id="list" class="center"
   ul
   - @tiles.each do |tile|
-    li = "#{tile.word}  #{votes_of tile}"
+    li = "#{tile.word},  #{votes_of tile}"

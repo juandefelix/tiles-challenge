@@ -11,7 +11,23 @@ body {
 }
 
 h4 {
-  padding-top: 25px;
+  text-align: center;
+  padding-top: 30px;
+}
+
+#list{
+  margin-top: 40px;
+  width: 50%;
+}
+
+li {
+  font-size: 1.25em;
+  list-style-type: decimal;
+  margin: 0 0 12px 212px;
+}
+
+#tiles_title {
+  margin-top: 140px;
 }
 
 #tiles_container {
@@ -21,6 +37,9 @@ h4 {
 
 .clear {
   clear: both;
+}
+.center {
+  margin: 0 auto
 }
 
 .tile {
