@@ -11,15 +11,10 @@ class TilesController < ApplicationController
     timestamp = params[:tile][:timestamp]
     
     MongoWorker.perform_async(word, timestamp)
-    
+
     respond_to do |format|
-      # if @tile.save
-        format.html { redirect_to @tile, notice: 'Tile was successfully created.' }
-        format.js { render "success" }
-      # else
-      #   format.html { render action: 'new' }
-      #   format.js { render action: 'exception' }
-      # end
+        format.html { redirect_to root_path }
+        format.js { render "alert('Hello Rails');" }
     end
   end
 
