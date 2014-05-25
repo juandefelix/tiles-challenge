@@ -1,9 +1,0 @@
-= form_for @tile do |f|
-  - if @tile.errors.any?
-    #error_explanation
-      h2 = "#{pluralize(@tile.errors.count, "error")} prohibited this tile from being saved:"
-      ul
-        - @tile.errors.full_messages.each do |message|
-          li = message
-
-  .actions = f.submit 'Save'
