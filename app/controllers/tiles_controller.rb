@@ -5,13 +5,11 @@ class TilesController < ApplicationController
   end
 
   def create
-    # debugger
     @id = params[:tile][:id]
-    begin
-      word = params[:tile][:word]
-      timestamp = params[:tile][:timestamp]
-      
+    word = params[:tile][:word]
+    timestamp = params[:tile][:timestamp]
 
+    begin  
       MongoWorker.perform_async(word, timestamp)
       raise if rand(10) == 7
       respond_to do |format|
@@ -28,5 +26,5 @@ class TilesController < ApplicationController
     def tile_params
       params.require(:tile).permit(:word, :timestamp)
     end
-  end
+end
 
