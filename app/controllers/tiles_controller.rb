@@ -1,4 +1,4 @@
-class TilesController < ApplicationController
+  class TilesController < ApplicationController
   
   def index
     @tiles = Tile.ten_most_clicked
