@@ -11,11 +11,13 @@
 
     begin  
       MongoWorker.perform_async(word, timestamp)
-      raise if rand(10) == 7
+      raise "Random exception" if rand(10) == 7
       respond_to do |format|
           format.js { render text: "Success".to_json }
       end
-    rescue
+    rescue Exception => e  
+      puts e.message  
+      puts e.backtrace.inspect 
       respond_to do |format|
           format.js { render "exception" }
       end
