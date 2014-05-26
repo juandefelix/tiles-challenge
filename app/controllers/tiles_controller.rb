@@ -17,7 +17,7 @@
       end
     rescue Exception => e  
       puts e.message  
-      puts e.backtrace.inspect 
+      puts e.backtrace 
       respond_to do |format|
           format.js { render "exception" }
       end
