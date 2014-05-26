@@ -18,6 +18,7 @@ gem 'slim-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'sidekiq'
 gem 'json'
+gem 'faker'
 
 group :test do
   gem 'database_cleaner'
@@ -29,7 +30,6 @@ end
 group :test, :development do
   gem 'awesome_print'
   gem 'factory_girl_rails'
-  gem 'faker'
   gem 'rspec-rails', '>= 2.0.1'
 end
 
