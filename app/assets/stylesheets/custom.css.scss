@@ -1,11 +1,9 @@
-// Place all the styles related to the tiles controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap";
 
 body {
   background-color: #fff;
   color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: verdana, arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
@@ -15,40 +13,34 @@ h4 {
   padding-top: 30px;
 }
 
-#list{
-  margin-top: 40px;
-  width: 50%;
+ul{
+  text-align: left;
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 20px 0 8px 170px;
 }
 
 li {
-  font-size: 1.25em;
+  font-size: 1.50em;
   list-style-type: decimal;
-  margin: 0 0 12px 212px;
-}
-
-#tiles_title {
-  margin-top: 140px;
-}
-
-#tiles_container {
-  width: 1170px;
-  padding-bottom: 50px;
+  margin-bottom: 12px;
 }
 
 .clear {
   clear: both;
 }
 .center {
-  margin: 0 auto
+  margin: 0 auto;
+  text-align: center;
 }
 
 .tile {
   float: left;
-  margin: 7px;
+  margin: 0.59%;
   width: 11.05%;
-  height: 75px;
+  height: 6.41%;
   background-color: #99FFCC;
-  border: 1px solid   #8AE6B8;
+  border: 1px solid #8AE6B8;
   border-radius: 3px;
   &:hover {
   background-color: #00FFaa;
@@ -57,5 +49,30 @@ li {
 
 .name {
   text-align: center;
-  margin: 26px auto;
+  margin: 22% auto;
+  font-size: 1em;
+}
+
+.container {
+  width: 1170px;
+}
+
+#list{
+  margin: 40px auto 0px;
+  width: 50%;
+}
+
+#tiles_title {
+  margin-top: 115px;
+  text-align: center;
+
+}
+
+#tiles_container {
+  // width: 1170px;
+  padding-bottom: 50px;
+}
+
+#home_button {
+  margin: 50px auto;
 }

@@ -1,11 +1,9 @@
 h4 Tiles Challenge - Click on the tiles until all of them dissapear. Then you will see the most clicked names 
 
-
-
-div id = "tiles_container" class = "clear"
+div id = "tiles_container"
   - StaticPagesHelper::words.each_with_index do |tile, index|
       div class = "tile" id = index
         p class = "name"
           = tile
   br class="clear"
-      
+    

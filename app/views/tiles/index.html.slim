@@ -1,8 +1,10 @@
 = provide :title, "Most Clicked Words"
 
-h4 id="tiles_title" MOST CLICKED WORDS AND NUMBER OF CLICKS
+h3 id="tiles_title" MOST CLICKED WORDS AND NUMBER OF CLICKS
 
 div id="list" class="center"
   ul
-  - @tiles.each do |tile|
-    li = "#{tile.word},  #{votes_of tile}"
+    - @tiles.each do |tile|
+      li = "#{tile.word},  #{votes_of tile}"
+
+  = link_to "Back to Tiles", root_path, class: "btn btn-large", id: "home_button"
