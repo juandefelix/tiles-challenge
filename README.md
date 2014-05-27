@@ -9,4 +9,4 @@ When you click a tile, the tile will dissapear and the word previously displayed
 Randomly the controller will raise an exception when trying to place the task in the worker. In this case, the tile won't dissapear and it will turn red. You can try to click again on it or move to other tiles. The random exception will be raised once in ten clicks more or less.  
 When you click on the last tile reamining on the grid, the app will redirect to a list of the 10 most ckicked words. Everytime you reload the home page, the tiles will display a different word.  
 
-You can find the app deployedn heroku [here](http://jortiztileschallenge.herokuapp.com)
+You can find the app deployed in Heroku [here](http://jortiztileschallenge.herokuapp.com)
