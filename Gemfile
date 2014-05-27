@@ -30,6 +30,7 @@ group :test do
   gem 'capybara'
   gem 'mongoid-rspec', '>= 1.4.6'
   gem 'timecop'
+  gem 'spork'
 end
 
 group :test, :development do
